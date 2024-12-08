@@ -12,3 +12,15 @@
 6. take the weights for each model and Upload weights to yolov11-one-stage-evaluation.ipynb in kaggle
 7. download ultralyics, import, LSDC Get All Images and LSDC Fold Split notebooks from kaggle add input
 8. Run the one stage evaluation notebook to get submission.csv for the competition
+
+
+# Method 2: Two Stage pass using output from 3 Yolov11 Models into one ResNet50 model
+1. Uploaded combined_output.csv file for all 194k+ images
+2. Uploaded modified_file.csv for 61k+ images that are valid
+3. Uploaded Stage2.ipynb which does the csv file modification and training of ResNet50 model
+4. Uploaded cv_processing.ipynb which does the image cropping based on region proposals (checks for invalid boxes as well; may need improvements to filtering or thresholding)
+
+## Steps
+1. Use cv_processing.ipynb to crop the images using combined_output.csv as reference for bounding boxes
+2. Use Stage2.ipynb to remove lines from combined_output.csv to get modified_file.csv based on cropped_images for images that are not saved in step 1
+3. Run training phase of Stage2.ipynb to train model and get the weights.
