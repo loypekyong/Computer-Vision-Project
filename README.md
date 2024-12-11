@@ -27,6 +27,18 @@
 
 # Streamlit App
 ## To test/inference, We have created a streamlit app that can be run
+### Don't forget to download any modules needed by the streamlit
+Modules:
+- streamlit
+- PIL
+- numpy
+- tensorflow
+- ultralytics
+- torch and torchvision
+- matplotlib
+- cv2
+
+Steps to Run:
 1. Download the `weights` folder and `Detect.py` and combine it into one folder
 2. Run `Detect.py` in the terminal from the folder location by using
    
