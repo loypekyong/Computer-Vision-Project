@@ -24,3 +24,13 @@
 1. Use cv_processing.ipynb to crop the images using combined_output.csv as reference for bounding boxes
 2. Use Stage2.ipynb to remove lines from combined_output.csv to get modified_file.csv based on cropped_images for images that are not saved in step 1
 3. Run training phase of Stage2.ipynb to train model and get the weights.
+
+# Streamlit App
+## To test/inference, We have created a streamlit app that can be run
+1. Download the `weights` folder and `Detect.py` and combine it into one folder
+2. Run `Detect.py` in the terminal from the folder location by using
+   
+   ```Console
+   streamlit run Detect.py
+   ```
+3. Once open in your browser, start uploading the image you want to test and wait for results.
